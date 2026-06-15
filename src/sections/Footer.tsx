@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import logoSrc from '../Logo/Logo.png';
 
 export default function Footer() {
   return (
@@ -15,16 +16,21 @@ export default function Footer() {
           &copy; 2026 ELEV8 Auto & Aviation. All rights reserved.
         </motion.p>
 
-        {/* Brand mark */}
-        <motion.span
-          className="text-xs font-bold tracking-widest text-white/10"
+        {/* Brand mark with logo */}
+        <motion.div
+          className="flex items-center gap-2"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
-          ELEV8
-        </motion.span>
+          <img
+            src={logoSrc}
+            alt="ELEV8 Logo"
+            className="w-8 h-8 rounded-full object-cover ring-1 ring-white/15 opacity-60"
+          />
+          <span className="text-xs font-bold tracking-widest text-white/10">ELEV8</span>
+        </motion.div>
 
         {/* Links */}
         <motion.div

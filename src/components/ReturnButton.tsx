@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
+import logoSrc from '../Logo/Logo.png';
 
 export default function ReturnButton() {
   return (
@@ -11,6 +12,11 @@ export default function ReturnButton() {
     >
       {/* Logo */}
       <div className="flex items-center gap-3">
+        <img
+          src={logoSrc}
+          alt="ELEV8 Logo"
+          className="w-10 h-10 rounded-full object-cover ring-1 ring-white/20"
+        />
         <span className="text-lg font-bold tracking-widest text-white">ELEV8</span>
       </div>
 
